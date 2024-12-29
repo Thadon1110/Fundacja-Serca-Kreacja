@@ -51,7 +51,7 @@ const Navbar = ({ menuActive }) => {
 				</div>
 				<div className={`navbar__menu ${isScrolled ? 'navbar__menu-scrolled' : ''}`}>
 					<button onClick={() => setMenuActive(true)}>
-						<i className='fa-solid fa-bars'></i>
+						<i className='fa-solid fa-bars' aria-label='Menu'></i>
 					</button>
 				</div>
 				<div className={`navbar__links ${isScrolled ? 'navbar__links-scrolled' : ''}`}>
