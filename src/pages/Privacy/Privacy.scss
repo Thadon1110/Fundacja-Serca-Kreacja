@@ -1,0 +1,225 @@
+@import '/src/styles/main.scss';
+
+.privacy__header {
+	position: relative;
+	padding-top: 120px;
+
+	@include respond(small) {
+		padding-top: 150px;
+	}
+
+	@include respond(large) {
+		padding-top: 180px;
+	}
+
+	&__content {
+		&__header {
+			text-align: center;
+			margin-bottom: 50px;
+		}
+
+		a {
+			color: $secondary-color;
+		}
+
+		p {
+			padding: 5px 0;
+			font-size: 1.2rem;
+			color: $text-color;
+
+			@include respond(small) {
+				font-size: 1.3rem;
+			}
+
+			@include respond(large) {
+				font-size: 1.6rem;
+			}
+		}
+
+		h2 {
+			padding-bottom: 10px;
+		}
+
+		h3 {
+			margin-top: 30px;
+			margin-bottom: 10px;
+		}
+
+		h4 {
+			margin-top: 25px;
+			margin-bottom: 5px;
+		}
+
+		ul {
+			margin-left: 25px;
+		}
+
+		&__texts {
+			display: flex;
+
+			&__tableOfContents {
+				display: none;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-end;
+				order: 2;
+				position: relative;
+				margin-top: 50px;
+				padding-left: 40px;
+
+				@include respond(medium) {
+					display: flex;
+					width: 30%;
+				}
+
+				&__content {
+					position: sticky;
+					top: 20%;
+					margin-right: 20px;
+
+					p,
+					a {
+						color: $black;
+					}
+
+					p {
+						font-size: 2.4rem;
+
+						@include respond(large) {
+							font-size: 2.8rem;
+						}
+					}
+
+					a {
+						font-weight: bold;
+						text-decoration: underline;
+					}
+
+					a,
+					li {
+						font-size: 1.4rem;
+
+						@include respond(large) {
+							font-size: 1.5rem;
+						}
+					}
+
+					ol {
+						margin-left: 25px;
+
+						li {
+							padding: 3px 0;
+						}
+					}
+
+					hr {
+						margin-top: 20px;
+						opacity: 0.3;
+					}
+				}
+
+				p {
+					width: auto;
+				}
+			}
+
+			&__text {
+				order: 1;
+				width: 100%;
+
+				@include respond(medium) {
+					width: 70%;
+				}
+
+				#dane_osobowe,
+				#zgoda_na_utrwalenie,
+				#cele_i_czynnosci,
+				#pliki_cookies,
+				#logi_serwera {
+					scroll-margin-block-start: 110px;
+
+					@include respond(large) {
+						scroll-margin-block-start: 140px;
+					}
+				}
+			}
+		}
+	}
+
+	.section {
+		&-ball {
+			&:nth-child(1) {
+				left: 6%;
+				top: 11%;
+				background-color: $color1;
+
+				@include respond(medium) {
+					left: 80%;
+					top: 4.5%;
+				}
+			}
+
+			&:nth-child(2) {
+				right: 10%;
+				top: 23%;
+				background-color: $primary-color;
+			}
+
+			&:nth-child(3) {
+				left: 10%;
+				bottom: 20%;
+				background-color: $color2;
+
+				@include respond(medium) {
+					left: 75%;
+					bottom: 20%;
+				}
+			}
+
+			&:nth-child(4) {
+				right: 10%;
+				bottom: 14%;
+				background-color: $color1;
+			}
+
+			&:nth-child(5) {
+				left: 15%;
+				bottom: 4%;
+				background-color: $color3;
+
+				@include respond(medium) {
+					left: 70%;
+					bottom: 4%;
+				}
+			}
+
+			&:nth-child(6) {
+				right: 40%;
+				top: 35%;
+				background-color: $color2;
+
+				@include respond(medium) {
+					right: 20%;
+					top: 35%;
+				}
+			}
+
+			&:nth-child(7) {
+				left: 5%;
+				top: 48%;
+				background-color: $secondary-color;
+
+				@include respond(medium) {
+					left: 80%;
+					top: 48%;
+				}
+			}
+
+			&:nth-child(8) {
+				right: 5%;
+				bottom: 37%;
+				background-color: $color3;
+			}
+		}
+	}
+}

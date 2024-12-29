@@ -1,0 +1,142 @@
+@import './reset';
+@import './colors';
+@import './mixins';
+@import './animations';
+@import './breakpoints';
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.section {
+	padding: 10px;
+
+	h1 {
+		font-size: 2.8rem;
+		text-align: center;
+
+		@include respond(small) {
+			font-size: 3.4rem;
+		}
+
+		@include respond(large) {
+			font-size: 4.2rem;
+		}
+	}
+
+	h2 {
+		font-size: 2rem;
+		text-transform: uppercase;
+		font-weight: bold;
+
+		@include respond(small) {
+			font-size: 2.4rem;
+		}
+
+		@include respond(medium) {
+			font-size: 2.8rem;
+		}
+	}
+
+	h3 {
+		font-size: 1.8rem;
+		text-transform: uppercase;
+		font-weight: bold;
+
+		@include respond(small) {
+			font-size: 2rem;
+		}
+
+		@include respond(medium) {
+			font-size: 2.2rem;
+		}
+	}
+
+	h4 {
+		font-size: 1.6rem;
+		text-transform: uppercase;
+		font-weight: bold;
+
+		@include respond(small) {
+			font-size: 1.8rem;
+		}
+
+		@include respond(medium) {
+			font-size: 2rem;
+		}
+	}
+
+	&-ball {
+		position: absolute;
+		border-radius: 50%;
+		background-color: $primary-color;
+		z-index: -1;
+
+		&-small {
+			height: 20px;
+			width: 20px;
+
+			@include respond(medium) {
+				height: 30px;
+				width: 30px;
+			}
+		}
+
+		&-big {
+			height: 30px;
+			width: 30px;
+
+			@include respond(medium) {
+				height: 40px;
+				width: 40px;
+			}
+		}
+	}
+
+	&-hp {
+		font-size: 1.5rem;
+		color: $text-color;
+		text-transform: uppercase;
+	}
+
+	&__header {
+		text-align: center;
+
+		p {
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		p {
+			font-size: 1.4rem;
+			color: $secondary-color;
+
+			@include respond(small) {
+				font-size: 1.5rem;
+			}
+
+			@include respond(medium) {
+				font-size: 1.6rem;
+			}
+		}
+
+		h2 {
+			margin-top: 0.5rem;
+		}
+	}
+
+	&__text {
+		padding: 20px;
+		font-size: 1.4rem;
+		color: $text-color;
+
+		@include respond(medium) {
+			font-size: 1.5rem;
+		}
+
+		@include respond(large) {
+			font-size: 1.6rem;
+		}
+	}
+}

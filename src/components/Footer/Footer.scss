@@ -1,0 +1,56 @@
+@import '/src/styles/main.scss';
+
+.footer {
+	margin-top: 2rem;
+	width: 100%;
+	padding: 2rem;
+	background-color: $third-color;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1.4rem;
+
+		@include respond(medium) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		&__links {
+			display: flex;
+			gap: 2rem;
+
+			a {
+				letter-spacing: 1px;
+				font-size: 1.1rem;
+				font-weight: bold;
+				color: $white;
+				text-transform: uppercase;
+				transition: color 0.3s;
+
+				&:hover {
+					color: $white-hover;
+				}
+
+				@include respond(medium) {
+					font-size: 1.2rem;
+				}
+			}
+		}
+
+		&__copy {
+			p {
+				letter-spacing: 1px;
+				font-size: 0.9rem;
+				color: $text-color;
+				text-transform: uppercase;
+
+				@include respond(medium) {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+}

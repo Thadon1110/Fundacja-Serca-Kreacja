@@ -1,0 +1,31 @@
+.animateOnScroll-left,
+.animateOnScroll-right,
+.animateOnScroll-up,
+.animateOnScroll-down {
+	opacity: 0;
+	transition: opacity 0.5s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.animateOnScroll-left {
+	transform: translate(-50px, 0);
+}
+
+.animateOnScroll-right {
+	transform: translate(50px, 0);
+}
+
+.animateOnScroll-up {
+	transform: translate(0, -50px);
+}
+
+.animateOnScroll-down {
+	transform: translate(0, 50px);
+}
+
+.animateOnScroll-left.animate,
+.animateOnScroll-right.animate,
+.animateOnScroll-up.animate,
+.animateOnScroll-down.animate {
+	opacity: 1;
+	transform: translate(0);
+}

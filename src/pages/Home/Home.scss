@@ -1,0 +1,681 @@
+@import '/src/styles/main.scss';
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// HEADER
+
+.home__header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	position: relative;
+	height: 100vh;
+	min-height: 700px;
+	padding: 20px;
+
+	p {
+		text-align: center;
+		font-size: 1.2rem;
+		color: $text-color;
+
+		@include respond(small) {
+			font-size: 1.3rem;
+		}
+
+		@include respond(large) {
+			font-size: 1.6rem;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: center;
+		gap: 3rem;
+		margin-top: 1rem;
+	}
+
+	&__photos {
+		display: flex;
+		gap: 3rem;
+		margin-top: 1rem;
+
+		img {
+			height: 200px;
+			width: 120px;
+			border-radius: 100px;
+			object-fit: cover;
+
+			&:nth-child(1),
+			&:nth-child(4) {
+				display: none;
+
+				@include respond(medium) {
+					display: block;
+				}
+			}
+
+			&:nth-child(2),
+			&:nth-child(3) {
+				@include respond(medium) {
+					margin-top: 5rem;
+				}
+			}
+
+			@include respond(small) {
+				height: 250px;
+				width: 150px;
+			}
+
+			@include respond(large) {
+				height: 300px;
+				width: 180px;
+			}
+		}
+	}
+
+	.section {
+		&-ball {
+			&:nth-child(1) {
+				left: 16%;
+				top: 20%;
+				background-color: $color1;
+
+				@include respond(medium) {
+					left: 10%;
+					top: 23%;
+				}
+			}
+
+			&:nth-child(2) {
+				right: 10%;
+				top: 23%;
+				background-color: $primary-color;
+			}
+
+			&:nth-child(3) {
+				left: 10%;
+				bottom: 20%;
+				background-color: $color2;
+			}
+
+			&:nth-child(4) {
+				right: 10%;
+				bottom: 14%;
+				background-color: $color1;
+			}
+
+			&:nth-child(5) {
+				left: 40%;
+				bottom: 5%;
+				background-color: $color3;
+			}
+
+			&:nth-child(6) {
+				left: 40%;
+				top: 15%;
+				background-color: $color2;
+
+				@include respond(medium) {
+					left: 60%;
+					top: 20%;
+				}
+			}
+
+			&:nth-child(7) {
+				left: 5%;
+				top: 48%;
+				background-color: $secondary-color;
+			}
+
+			&:nth-child(8) {
+				right: 5%;
+				bottom: 37%;
+				background-color: $color3;
+			}
+
+			&:nth-child(9) {
+				left: 35%;
+				top: 43%;
+				background-color: $color3;
+			}
+
+			&:nth-child(10) {
+				right: 28%;
+				top: 45%;
+				background-color: $color2;
+
+				@include respond(large) {
+					right: 35%;
+					top: 45%;
+				}
+			}
+
+			&:nth-child(9),
+			&:nth-child(10) {
+				display: none;
+
+				@include respond(medium) {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// DONORS
+
+.home__donors {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+	&__photos {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		padding: 20px;
+
+		img {
+			height: 100px;
+			padding: 10px;
+			object-fit: contain;
+			filter: saturate(0);
+			transition: filter 0.3s, scale 0.3s;
+
+			&:hover {
+				scale: 1.05;
+				filter: saturate(1);
+			}
+		}
+
+		a:nth-child(2) {
+			img {
+				height: 150px;
+			}
+		}
+
+		a:nth-child(3) {
+			img {
+				height: 110px;
+			}
+		}
+	}
+
+	.section {
+		&-hp {
+			text-align: center;
+		}
+
+		&-ball {
+			&:nth-child(1) {
+				left: 16%;
+				top: 20%;
+				background-color: $color1;
+			}
+
+			&:nth-child(2) {
+				right: 2%;
+				bottom: 23%;
+				background-color: $primary-color;
+			}
+		}
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// DONORS
+
+.home__news {
+	position: relative;
+	margin-top: 4rem;
+	padding-bottom: 7rem;
+
+	&__photos {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 3rem;
+		margin-top: 3rem;
+
+		img {
+			max-height: 200px;
+			box-shadow: 0 0 10px $black;
+			object-fit: contain;
+			transition: scale 0.3s;
+
+			&:hover {
+				scale: 1.05;
+			}
+
+			@include respond(small) {
+				max-height: 250px;
+			}
+
+			@include respond(medium) {
+				max-height: 300px;
+			}
+
+			@include respond(large) {
+				max-height: 350px;
+			}
+		}
+	}
+
+	.section {
+		&-ball {
+			&:nth-child(1) {
+				left: 5%;
+				top: 15%;
+				background-color: $color2;
+			}
+
+			&:nth-child(2) {
+				right: 10%;
+				bottom: 40%;
+				background-color: $color1;
+			}
+
+			&:nth-child(3) {
+				left: 15%;
+				bottom: 5%;
+				background-color: $color3;
+			}
+		}
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// BBMS
+
+.home__bbms {
+	position: relative;
+	margin-top: 100px;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+
+		@include respond(medium) {
+			flex-direction: row;
+		}
+
+		&-img {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			order: 2;
+
+			@include respond(medium) {
+				order: 1;
+			}
+
+			img {
+				max-height: 400px;
+				object-fit: contain;
+				margin-right: 3rem;
+
+				@include respond(medium) {
+					max-height: 500px;
+				}
+
+				@include respond(large) {
+					max-height: 600px;
+				}
+			}
+		}
+
+		&__text {
+			order: 1;
+			margin-top: 4rem;
+
+			@include respond(medium) {
+				order: 2;
+				text-align: left;
+
+				.section__header {
+					text-align: left;
+				}
+
+				.section__text {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+
+	.section {
+		&-ball {
+			&:nth-child(1) {
+				right: 15%;
+				top: 5%;
+				background-color: $color2;
+			}
+
+			&:nth-child(2) {
+				right: 10%;
+				bottom: 40%;
+				background-color: $secondary-color;
+
+				@include respond(extra-large) {
+					right: 1%;
+				}
+			}
+
+			&:nth-child(3) {
+				left: 5%;
+				bottom: 10%;
+				background-color: $color3;
+
+				@include respond(medium) {
+					left: 1%;
+					bottom: 5%;
+				}
+			}
+
+			&:nth-child(4) {
+				left: 5%;
+				top: 15%;
+				background-color: $primary-color;
+			}
+
+			&:nth-child(5) {
+				left: 25%;
+				top: 40%;
+				background-color: $color1;
+
+				@include respond(medium) {
+					left: 45%;
+				}
+
+				@include respond(extra-large) {
+					left: 35%;
+				}
+			}
+
+			&:nth-child(6) {
+				left: 15%;
+				bottom: 35%;
+				background-color: $color2;
+
+				@include respond(medium) {
+					left: 65%;
+					bottom: 20%;
+				}
+
+				@include respond(extra-large) {
+					left: 55%;
+					bottom: 10%;
+				}
+			}
+
+			&:nth-child(7) {
+				right: 10%;
+				bottom: 3%;
+				background-color: $color1;
+			}
+		}
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// HISTORY
+
+.home__history {
+	position: relative;
+	margin-top: 100px;
+	padding-bottom: 4rem;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		@include respond(medium) {
+			flex-direction: row;
+		}
+
+		@include respond(large) {
+			margin-top: 3rem;
+		}
+
+		&-img {
+			order: 2;
+
+			@include respond(medium) {
+				order: 1;
+			}
+
+			img {
+				max-width: 100%;
+				border-radius: 50px;
+				border-bottom-right-radius: 328px;
+				border-bottom-left-radius: 328px;
+
+				@include respond(medium) {
+					max-width: 400px;
+					border-radius: 50px;
+					border-top-left-radius: 328px;
+					border-bottom-left-radius: 328px;
+				}
+
+				@include respond(large) {
+					max-width: 500px;
+				}
+
+				@include respond(extra-large) {
+					max-width: 600px;
+				}
+			}
+		}
+
+		&__text {
+			order: 1;
+
+			@include respond(medium) {
+				order: 2;
+			}
+		}
+	}
+
+	.section {
+		&-ball {
+			&:nth-child(1) {
+				left: 15%;
+				top: 5%;
+				background-color: $color2;
+
+				@include respond(extra-large) {
+					left: 15%;
+					top: 10%;
+				}
+			}
+
+			&:nth-child(2) {
+				right: 5%;
+				top: 20%;
+				background-color: $primary-color;
+			}
+
+			&:nth-child(3) {
+				left: 5%;
+				bottom: 10%;
+				background-color: $color3;
+			}
+
+			&:nth-child(4) {
+				right: 10%;
+				bottom: 13%;
+				background-color: $secondary-color;
+			}
+
+			&:nth-child(5) {
+				left: 30%;
+				top: 36%;
+				background-color: $color1;
+
+				@include respond(medium) {
+					left: 40%;
+					top: 20%;
+				}
+
+				@include respond(extra-large) {
+					left: 49%;
+					top: 20%;
+				}
+			}
+		}
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// SCHOOL
+
+.home__school {
+	position: relative;
+	margin-top: 100px;
+	margin-bottom: 150px;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+
+		@include respond(medium) {
+			flex-direction: row;
+		}
+
+		&-img {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			order: 2;
+
+			@include respond(medium) {
+				order: 1;
+			}
+
+			img {
+				max-height: 400px;
+				object-fit: contain;
+				margin-left: 2rem;
+
+				@include respond(medium) {
+					max-height: 450px;
+					margin-left: 0;
+				}
+
+				@include respond(large) {
+					max-height: 500px;
+					margin-left: 2rem;
+				}
+
+				@include respond(extra-large) {
+					margin-left: 5rem;
+				}
+			}
+		}
+
+		&__text {
+			order: 1;
+			margin-top: 4rem;
+			max-width: 600px;
+
+			@include respond(medium) {
+				order: 2;
+				text-align: left;
+
+				.section__header {
+					text-align: left;
+				}
+
+				.section__text {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+
+	.section {
+		&-ball {
+			&:nth-child(1) {
+				left: 3%;
+				top: 10%;
+				background-color: $primary-color;
+
+				@include respond(large) {
+					left: 4%;
+					top: 14%;
+				}
+			}
+
+			&:nth-child(2) {
+				right: 5%;
+				top: 15%;
+				background-color: $secondary-color;
+
+				@include respond(large) {
+					right: 10%;
+					top: 12%;
+				}
+			}
+
+			&:nth-child(3) {
+				right: 45%;
+				top: 40%;
+				background-color: $color1;
+
+				@include respond(small) {
+					right: 40%;
+					top: 37%;
+				}
+
+				@include respond(medium) {
+					right: 52%;
+					top: 37%;
+				}
+
+				@include respond(large) {
+					right: 56%;
+					top: 37%;
+				}
+			}
+
+			&:nth-child(4) {
+				right: 10%;
+				bottom: 35%;
+				background-color: $primary-color;
+
+				@include respond(medium) {
+					right: 2%;
+				}
+
+				@include respond(large) {
+					right: 1%;
+				}
+			}
+
+			&:nth-child(5) {
+				left: 5%;
+				bottom: 5%;
+				background-color: $color3;
+
+				@include respond(medium) {
+					left: 1%;
+					bottom: 1%;
+				}
+			}
+		}
+	}
+}

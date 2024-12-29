@@ -1,0 +1,255 @@
+@import '/src/styles/main.scss';
+
+.contact__header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	position: relative;
+	min-height: 100vh;
+	padding: 150px 20px 50px;
+
+	h2 {
+		color: $secondary-color;
+
+		a {
+			color: $secondary-color;
+			transition: color 0.3s;
+
+			&:hover {
+				color: $secondary-color-hover;
+			}
+		}
+	}
+
+	&__mail {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+		position: relative;
+		padding: 30px 20px;
+		margin-top: 30px;
+		border-radius: 20px;
+		background-color: $third-color;
+		overflow: hidden;
+
+		&__bgc {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 0;
+
+			i {
+				position: absolute;
+				font-size: 20rem;
+				color: $text-color;
+				opacity: 0.1;
+
+				&:nth-child(1) {
+					top: -10%;
+					left: -10%;
+					rotate: -25deg;
+				}
+
+				&:nth-child(2) {
+					top: 30%;
+					left: -5%;
+				}
+
+				&:nth-child(3) {
+					top: -10%;
+					left: 30%;
+				}
+
+				&:nth-child(4) {
+					top: 65%;
+					left: 10%;
+					rotate: 45deg;
+				}
+
+				&:nth-child(5) {
+					top: 30%;
+					left: 50%;
+					rotate: 45deg;
+				}
+
+				&:nth-child(6) {
+					top: -10%;
+					left: 75%;
+					rotate: 45deg;
+				}
+
+				&:nth-child(7) {
+					top: 65%;
+					left: 60%;
+				}
+			}
+		}
+
+		p {
+			max-width: 500px;
+			font-size: 1.8rem;
+			text-align: center;
+			font-weight: bold;
+			color: $white;
+			z-index: 1;
+
+			@include respond(small) {
+				font-size: 2rem;
+			}
+
+			@include respond(medium) {
+				font-size: 2.4rem;
+			}
+		}
+
+		&__inputs {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 2rem;
+			width: 100%;
+
+			@include respond(medium) {
+				flex-direction: row;
+			}
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-end;
+			gap: 2rem;
+			width: 100%;
+			margin-top: 20px;
+			z-index: 1;
+
+			input,
+			textarea {
+				width: 100%;
+				padding: 10px 20px;
+				border-radius: 50px;
+				border: none;
+				color: $black;
+
+				&::placeholder {
+					color: $text-color;
+				}
+
+				@include respond(small) {
+					font-size: 1.6rem;
+				}
+
+				@include respond(medium) {
+					font-size: 2rem;
+				}
+			}
+
+			input {
+				@include respond(medium) {
+					width: 45%;
+				}
+			}
+
+			textarea {
+				min-height: 200px;
+				border-radius: 20px;
+				resize: none;
+				padding-top: 15px;
+			}
+
+			button {
+				margin-right: 20px;
+				padding: 10px 20px;
+				font-size: 1.5rem;
+				border-radius: 50px;
+				box-shadow: 0 4px $secondary-color-hover;
+				font-weight: bold;
+				background-color: $secondary-color;
+				color: $white;
+				transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+
+				&:hover {
+					transform: translateY(4px);
+					box-shadow: 0 0 $secondary-color-hover;
+					background-color: $secondary-color-hover;
+					color: $white-hover;
+				}
+
+				@include respond(small) {
+					font-size: 1.8rem;
+				}
+
+				@include respond(medium) {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+
+	.section {
+		&-ball {
+			&:nth-child(1) {
+				left: 16%;
+				top: 18%;
+				background-color: $color1;
+			}
+
+			&:nth-child(2) {
+				right: 5%;
+				top: 27%;
+				background-color: $primary-color;
+			}
+
+			&:nth-child(3) {
+				left: 4%;
+				bottom: 4%;
+				background-color: $color2;
+
+				@include respond(large) {
+					left: 15%;
+					bottom: 15%;
+				}
+			}
+
+			&:nth-child(4) {
+				right: 4%;
+				bottom: 14%;
+				background-color: $color1;
+			}
+
+			&:nth-child(5) {
+				right: 35%;
+				bottom: 1%;
+				background-color: $color3;
+			}
+
+			&:nth-child(6) {
+				left: 50%;
+				top: 13%;
+				background-color: $color2;
+
+				@include respond(large) {
+					top: 16%;
+				}
+			}
+
+			&:nth-child(7) {
+				left: 2%;
+				top: 48%;
+				background-color: $secondary-color;
+			}
+
+			&:nth-child(8) {
+				right: 2%;
+				bottom: 37%;
+				background-color: $color3;
+			}
+		}
+	}
+}

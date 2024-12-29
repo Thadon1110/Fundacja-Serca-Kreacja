@@ -1,0 +1,216 @@
+@import '/src/styles/main.scss';
+
+.supportUs__header {
+	position: relative;
+	min-height: 100vh;
+	padding-top: 130px !important;
+	padding-bottom: 50px;
+
+	@include respond(medium) {
+		padding-top: 150px !important;
+	}
+
+	@include respond(medium) {
+		padding-top: 170px !important;
+	}
+
+	p {
+		text-align: center;
+		font-size: 1.2rem;
+		color: $text-color;
+
+		@include respond(small) {
+			font-size: 1.3rem;
+		}
+
+		@include respond(large) {
+			font-size: 1.6rem;
+		}
+	}
+
+	&__cards {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 2rem;
+		margin-top: 40px;
+
+		&__card {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			gap: 2rem;
+			max-width: 280px;
+			padding: 20px;
+			border-radius: 12px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+			background-color: $white;
+			transition: scale 0.3s;
+
+			@include respond(small) {
+				min-height: 241px;
+			}
+
+			@include respond(medium) {
+				min-height: 261px;
+				padding: 30px 20px;
+			}
+
+			@include respond(large) {
+				min-height: 315px;
+			}
+
+			&:hover {
+				scale: 1.05;
+			}
+
+			i {
+				padding: 10px;
+				font-size: 3rem;
+				border-radius: 16px;
+				color: $white;
+			}
+
+			&:nth-child(1) {
+				i {
+					padding: 15px 10px;
+					background-color: $primary-color;
+					box-shadow: 0 0 8px $primary-color;
+				}
+			}
+
+			&:nth-child(2) {
+				i {
+					padding: 10px 14px;
+					background-color: $secondary-color;
+					box-shadow: 0 0 8px $secondary-color;
+				}
+			}
+
+			&:nth-child(3) {
+				i {
+					background-color: $color3;
+					box-shadow: 0 0 8px $color3;
+				}
+			}
+
+			&:nth-child(4) {
+				i {
+					padding: 10px 16px;
+					background-color: $color1;
+					box-shadow: 0 0 8px $color1;
+				}
+			}
+
+			&-title {
+				strong {
+					font-size: 1.8rem;
+					color: $black;
+				}
+			}
+		}
+	}
+
+	h2 {
+		margin-top: 8rem;
+		text-align: center;
+
+		.supportUs__header-h2-color {
+			color: $secondary-color;
+		}
+	}
+
+	&-img,
+	&-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&-img {
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+
+		img {
+			width: 80%;
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+			transition: scale 0.3s;
+
+			@include respond(small) {
+				width: auto;
+			}
+
+			&:hover {
+				scale: 1.05;
+			}
+		}
+	}
+
+	&-button {
+		margin-top: 3rem;
+	}
+
+	.section {
+		&-ball {
+			&:nth-child(1) {
+				left: 6%;
+				top: 11%;
+				background-color: $color1;
+			}
+
+			&:nth-child(2) {
+				right: 10%;
+				top: 23%;
+				background-color: $primary-color;
+
+				@include respond(large) {
+					right: 5%;
+					top: 23%;
+				}
+
+				@include respond(extra-large) {
+					right: 5%;
+					top: 15%;
+				}
+			}
+
+			&:nth-child(3) {
+				left: 10%;
+				bottom: 20%;
+				background-color: $color2;
+			}
+
+			&:nth-child(4) {
+				right: 10%;
+				bottom: 14%;
+				background-color: $color1;
+			}
+
+			&:nth-child(5) {
+				left: 15%;
+				bottom: 4%;
+				background-color: $color3;
+			}
+
+			&:nth-child(6) {
+				right: 40%;
+				top: 35%;
+				background-color: $color2;
+			}
+
+			&:nth-child(7) {
+				left: 5%;
+				top: 48%;
+				background-color: $secondary-color;
+			}
+
+			&:nth-child(8) {
+				right: 5%;
+				bottom: 37%;
+				background-color: $color3;
+			}
+		}
+	}
+}

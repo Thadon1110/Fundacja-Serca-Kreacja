@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /polityka-prywatnosci
+Disallow: /*.pdf$
+Disallow: /*.css$
+Allow: /
